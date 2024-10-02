@@ -1,4 +1,4 @@
-import { LWrapper } from 'cloud-ui.vusion';
+import { LWrapper } from 'cloud-ui.kubevue';
 
 export default {
     path: 'demo',
