@@ -1,9 +1,9 @@
 import { mockRequest } from '../utils';
 
 const mockData = [
-    { id: 1, name: 'easy-code', description: '低代码平台' },
-    { id: 2, name: 'kubevue', description: 'Kubevue 框架' },
-    { id: 2, name: 'cloud-ui', description: 'Cloud UI 组件库' },
+    { id: 1, name: 'easy-code', description: 'Low-Code Platform' },
+    { id: 2, name: 'kubevue', description: 'Kubevue Framework' },
+    { id: 2, name: 'cloud-ui', description: 'Cloud UI component library' },
 ];
 
 export default {
@@ -17,7 +17,7 @@ export default {
         return mockRequest(mockData.find((item) => item.id === +id));
     },
     create(params) {
-        // 在这里模拟了一个后端过滤数据的请求
+        // A request to filter data on the backend is simulated here.
         return mockRequest({
             code: 200,
             success: true,

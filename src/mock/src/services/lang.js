@@ -1,6 +1,6 @@
 import { mockRequest } from '../utils';
 
-// 模拟后端数据
+// Simulate backend data
 const mockData = [
     { text: 'Batch', value: 'bat' },
     { text: 'C', value: 'c' },
@@ -56,7 +56,7 @@ const mockData = [
     { text: 'YAML', value: 'yaml' },
 ];
 
-// 模拟构造数量较多的 500 条后端数据
+// Simulate and construct a large number of 500 pieces of back-end data
 const mockData2 = (() => {
     const mockData = [];
     const total = 500;
@@ -83,7 +83,7 @@ export default {
         return mockRequest(mockData);
     },
     loadPartial(keyword) {
-        // 在这里模拟了一个后端过滤数据的请求
+        // A request to filter data on the backend is simulated here.
         return mockRequest({
             total: mockData.length,
             data: mockData.filter((item) => item.text.includes(keyword)),

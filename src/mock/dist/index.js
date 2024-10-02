@@ -14,7 +14,7 @@ var _lang2 = _interopRequireDefault(_lang);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// 模拟数据服务
+// Simulation data service
 var mockService = {
     user: _user2.default,
     lang: _lang2.default

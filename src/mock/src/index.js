@@ -4,7 +4,7 @@ import entity from './services/entity';
 
 export * from './utils';
 
-// 模拟数据服务
+// Simulation data service
 export const service = {
     user,
     lang,

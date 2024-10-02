@@ -4,11 +4,11 @@ const globby = require('globby');
 const _ = require('../lib/utils');
 
 /**
- * 从目录中获得路由 Map
- * @param basePath 基础路径，相对路径
+ * Get route Map from directory
+ * @param basePath base path, relative path
  */
 exports.getRoutesMapFromDir = function getRoutesMapFromDir(basePath, filters = {}) {
-    // 递归目录效率低，而且递归出来的树结构不一定是最终结构，直接用 globby 一把获取所有的路径
+    // Recursive directories are inefficient, and the recursive tree structure is not necessarily the final structure. Use globby directly to get all the paths.
     const routesMap = {};
     globby.sync(['**/*.{vue,md}', '!**/node_modules', '!**/.git', '!**/*.vue/docs/*.md', '!**/*.blocks/**'], { cwd: basePath })
         .filter((filePath) => {

@@ -4,7 +4,7 @@
   "version": "0.4.11",
   "author": "Kubeworkz <kubeworkz@gmail.com>",
   "main": "./dist/index.js",
-  "repository": "kubevue/packages",
+  "repository": "saashqdev/packages",
   "homepage": "http://kubevue.github.io",
   "bugs": {
     "url": "http://github.com/saashqdev/packages/issues"

@@ -1,8 +1,8 @@
 const JS = require('javascript-stringify');
 
 /**
- * 关键词目录
- * 内部不应该有与路由相关的视图
+ * Keyword directory
+ * There should be no routing-related views internally
  */
 exports.KEYWORD_DIRS = [
     'assets',
@@ -17,8 +17,8 @@ exports.KEYWORD_DIRS = [
 ];
 
 /**
- * 占位型目录
- * 只是为了方便归类视图文件，占位目录名不体现在路径上
+ * Placeholder directory
+ * Just to facilitate the classification of view files, the placeholder directory name is not reflected in the path
  */
 exports.HOLDER_DIRS = [
     'views',
@@ -28,7 +28,7 @@ exports.HOLDER_DIRS = [
 exports.WRAPPER_PATH = 'cloud-ui.kubevue/src/layouts/l-wrapper.vue';
 
 /**
- * 从文件路径转为路由路径
+ * Convert file path to routing path
  */
 exports.transform = (filePath) => {
     filePath = filePath.replace(/\\/g, '/');
@@ -36,8 +36,8 @@ exports.transform = (filePath) => {
 };
 
 /**
- * 对路由进行规范化
- * @param routePath 路由路径
+ * Standardize routing
+ * @param routePath routing path
  */
 exports.normalize = (routePath) => routePath
     .replace(new RegExp(`(^|/)(${exports.HOLDER_DIRS.join('|')})($|/)`, 'g'), '$1')
@@ -73,19 +73,19 @@ const _mergeRoutesMap = function (routes1, routes2) {
         if (routes1[key]) {
             routes1[key] = Object.assign(routes1[key], routes2[key]);
         } else {
-            key && console.warn('[routes-loader][warning] 该路由在目录结构中没有实体，请检查: ' + key);
+            key && console.warn('[routes-loader][warning] This route has no entity in the directory structure, please check: ' + key);
             routes1[key] = routes2[key];
         }
     });
     return routes1;
 };
 /**
- * 合并 routesMap
+ * Merge routesMap
  */
 exports.mergeRoutesMap = (...args) => args.reduceRight((acc, cur) => _mergeRoutesMap(cur, acc));
 
 /**
- * 将 routesMap 转换为嵌套路由
+ * Convert routesMap to nested routes
  */
 exports.nestRoutes = function (routesMap, rootPath = '', restRedirect = false) {
     const routes = [];
@@ -113,7 +113,7 @@ exports.nestRoutes = function (routesMap, rootPath = '', restRedirect = false) {
     };
 
     Object.keys(routesMap).forEach((routePath) => parse(routesMap[routePath]));
-    // 补充首个路由
+    // Supplement the first route
     Object.keys(routesMap).forEach((routePath) => {
         const route = routesMap[routePath];
         if (route.children && route.children.length) {
@@ -132,7 +132,7 @@ exports.nestRoutes = function (routesMap, rootPath = '', restRedirect = false) {
 };
 
 /**
- * 拼接为 JS 字符串
+ * Concatenate into JS string
  */
 exports.renderRoute = function (route, comments = false, level = 0) {
     const indent = ' '.repeat(level * 4);
@@ -157,7 +157,7 @@ exports.renderRoute = function (route, comments = false, level = 0) {
 };
 
 /**
- * 拼接为 JS 字符串
+ * Concatenate into JS string
  */
 exports.renderRoutes = function (routes, comments = false, level = 1) {
     const indent = ' '.repeat((level - 1) * 4);

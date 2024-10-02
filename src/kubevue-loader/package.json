@@ -2,9 +2,9 @@
   "name": "kubevue-loader",
   "description": "Webpack loader for Kubevue components.",
   "version": "0.5.1",
-  "author": "Forrest <rainforest92@126.com>",
+  "author": "Kubeworkz <kubeworkz@gmail.com>",
   "main": "./index.js",
-  "repository": "kubevue/kubevue-loader",
+  "repository": "saashqdev/kubevue-loader",
   "bugs": {
     "url": "http://github.com/saashqdev/kubevue-loader/issues"
   },

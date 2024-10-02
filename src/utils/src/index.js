@@ -1,9 +1,9 @@
 import at from 'lodash/at';
 
 /**
- * 将 Components 数组转换为对象
+ * Convert the Components array to an object
  * @deprecated
- * @param {Array} Components - 组件数组
+ * @param {Array} Components - component array
  */
 export const mapComponents = (Components) => {
     const result = {};
@@ -15,19 +15,19 @@ export const mapComponents = (Components) => {
 };
 
 /**
- * 在 Vue 中安装组件
- * @param {Object|Array} Components - 组件集合
- * @param {Vue} Vue
+ * Installing components in Vue
+ * @param {Object|Array} Components - component collection
+ * @param {View} View
  */
 export function installComponents(Vue, Components) {
-    const caseRE = /^[A-Z]/;
+    const caseRE = /^[AZ]/;
     const blackList = ['directives', 'filters', 'utils', 'mixins', 'blocks', 'vendors', 'install', 'default'];
 
-    // 组件之间有依赖，有 install 的必须先安装
+    // There are dependencies between components, those with install must be installed first
     Object.keys(Components).forEach((key) => {
-        if (!caseRE.test(key)) { // 如果为大写则是组件
+        if (!caseRE.test(key)) { // If it is uppercase, it is a component
             if (!blackList.includes(key))
-                console.error('不允许组件名首字母小写', key, Components[key]);
+                console.error('The first letter of the component name is not allowed to be lowercase', key, Components[key]);
             return;
         }
 
@@ -38,9 +38,9 @@ export function installComponents(Vue, Components) {
         }
     });
     Object.keys(Components).forEach((key) => {
-        if (!caseRE.test(key)) { // 如果为大写则是组件
+        if (!caseRE.test(key)) { // If it is uppercase, it is a component
             if (!blackList.includes(key))
-                console.error('不允许组件名首字母小写', key, Components[key]);
+                console.error('The first letter of the component name is not allowed to be lowercase', key, Components[key]);
             return;
         }
 
@@ -53,18 +53,18 @@ export function installComponents(Vue, Components) {
 }
 
 /**
- * 在 Vue 中安装指令
- * @param {Object} directives - 指令集合
- * @param {Vue} Vue - 全局的 Vue
+ * Install directives in Vue
+ * @param {Object} directives - instruction set
+ * @param {Vue} Vue - global Vue
  */
 export function installDirectives(Vue, directives) {
     Object.keys(directives).forEach((key) => Vue.directive(key, directives[key]));
 }
 
 /**
- * 在 Vue 中安装过滤器
- * @param {Object} filters - 过滤器集合
- * @param {Vue} Vue - 全局的 Vue
+ * Install filters in Vue
+ * @param {Object} filters - filter collection
+ * @param {Vue} Vue - global Vue
  */
 export function installFilters(Vue, filters) {
     Object.keys(filters).forEach((key) => Vue.filter(key, filters[key]));
@@ -122,7 +122,7 @@ export function supportOverrideWatch(Vue) {
                     ret[key] = Array.isArray(child) ? child : [child];
             }
         }
-        return ret;
+        return right;
     };
 }
 
@@ -170,15 +170,15 @@ export function installOptions(Vue) {
 }
 
 /**
- * 在 Vue 中安装组件库
- * @param {Vue} Vue - 全局的 Vue
- * @param {Object} library - 包含组件，指令，过滤器
+ * Install component library in Vue
+ * @param {Vue} Vue - global Vue
+ * @param {Object} library - contains components, directives, filters
  */
 export function install(Vue, library) {
     if (!library)
         library = this; // eslint-disable-line
 
-    installOptions(Vue);
+    installOptions(View);
     installComponents(Vue, library);
 
     library.directives && installDirectives(Vue, library.directives);
