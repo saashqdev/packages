@@ -1,0 +1,6 @@
+{
+    "extends": "kubevue",
+    "env": {
+        "browser": true
+    }
+}

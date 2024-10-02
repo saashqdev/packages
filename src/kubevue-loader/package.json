@@ -1,0 +1,45 @@
+{
+  "name": "kubevue-loader",
+  "description": "Webpack loader for Kubevue components.",
+  "version": "0.5.1",
+  "author": "Forrest <rainforest92@126.com>",
+  "main": "./index.js",
+  "repository": "kubevue/kubevue-loader",
+  "bugs": {
+    "url": "http://github.com/saashqdev/kubevue-loader/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "kubevue",
+    "vue",
+    "webpack",
+    "loader"
+  ],
+  "tags": [
+    "kubevue",
+    "vue",
+    "webpack",
+    "loader"
+  ],
+  "dependencies": {
+    "vue-multifile-loader": "^15.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "eslint": "^6.0.0",
+    "eslint-config-kubevue": "^3.0.2",
+    "file-loader": "^4.0.0",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "vue-template-loader": "^1.0.0",
+    "kubevue-hooks": "^0.2.2",
+    "kubevue-utils": "^0.3.4",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

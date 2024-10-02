@@ -1,0 +1,36 @@
+{
+  "name": "@saashqdev/utils",
+  "description": "Kubevue Utils",
+  "version": "0.4.11",
+  "author": "Kubeworkz <kubeworkz@gmail.com>",
+  "main": "./dist/index.js",
+  "repository": "kubevue/packages",
+  "homepage": "http://kubevue.github.io",
+  "bugs": {
+    "url": "http://github.com/saashqdev/packages/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "kubevue",
+    "utils"
+  ],
+  "tags": [
+    "kubevue",
+    "utils"
+  ],
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.12.0",
+    "eslint-config-kubevue": "^3.0.1",
+    "husky": "^0.14.3",
+    "kubevue-hooks": "^0.2.1"
+  }
+}
