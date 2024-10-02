@@ -4,92 +4,92 @@ export default {
     'list/basic': {
         name: 'demo.list',
         meta: {
-            title: '基础列表',
-            crumb: '基础列表',
+            title: 'Basic List',
+            crumb: 'Basic List',
         },
     },
     'list/localList': {
         name: 'demo.localList',
         meta: {
-            title: '本地分页',
-            crumb: '本地分页',
+            title: 'Local Paging',
+            crumb: 'Local Paging',
         },
     },
     'list/tabs': {
         meta: {
-            title: '列表页',
+            title: 'List Page',
             crumb: {
-                title: '列表页',
+                title: 'List Page',
             },
         },
     },
     'list/tabs/basic': {
         name: 'demo.tabsList',
         meta: {
-            title: '列表页',
+            title: 'List Page',
             crumb: {
-                title: '列表页',
+                title: 'List Page',
             },
         },
     },
     'list/tabs/localList': {
         name: 'demo.tabs.localList',
         meta: {
-            title: '本地分页',
+            title: 'Local Paging',
             crumb: {
-                title: '本地分页',
+                title: 'Local Paging',
             },
         },
     },
     'list/tabs/noPageList': {
         name: 'demo.tabs.noPageList',
         meta: {
-            title: '列表页(无分页)',
+            title: 'List Page (no paging)',
             crumb: {
-                title: '列表页(无分页)',
+                title: 'List Page (no paging)',
             },
         },
     },
     form: {
         meta: {
-            title: '表单',
-            crumb: '表单',
+            title: 'Form',
+            crumb: 'Form',
         },
     },
     'form/basic': {
         meta: {
-            title: '基础表单',
-            crumb: '基础表单',
+            title: 'Basic Form',
+            crumb: 'Basic Form',
         },
     },
     'form/setting': {
         name: 'demo.form.setting',
         meta: {
-            title: '设置',
-            crumb: '设置',
+            title: 'Settings',
+            crumb: 'Settings',
         },
     },
     detail: {
         name: 'demo.detail',
         meta: {
-            title: '详情',
-            crumb: '详情',
+            title: 'Details',
+            crumb: 'Details',
         },
     },
     'detail/info': {
         meta: {
-            crumb: '详细信息',
+            crumb: 'Details',
         },
     },
     'detail/monitor': {
         meta: {
-            crumb: '监控',
+            crumb: 'Monitoring',
         },
     },
     router: {
         meta: {
-            title: '路由',
-            crumb: '路由',
+            title: 'Routing',
+            crumb: 'Routing',
             locks: [{
                 include: [/router/],
                 params: ['search', 'demo.router.list.page'],
@@ -100,32 +100,32 @@ export default {
         name: 'demo.router.list',
         first: true,
         meta: {
-            title: '列表(路由)',
-            crumb: '列表(路由)',
+            title: 'List (routes)',
+            crumb: 'List (routes)',
         },
     },
     'router/setting': {
         name: 'demo.router.setting',
         meta: {
-            title: '设置',
-            crumb: '设置',
+            title: 'Settings',
+            crumb: 'Settings',
         },
     },
     'router/detail': {
         name: 'demo.router.detail',
         meta: {
-            title: '详情',
-            crumb: '详情',
+            title: 'Details',
+            crumb: 'Details',
         },
     },
     'router/detail/info': {
         meta: {
-            crumb: '详细信息',
+            crumb: 'Details',
         },
     },
     'router/detail/monitor': {
         meta: {
-            crumb: '监控',
+            crumb: 'Monitoring',
         },
     },
 };

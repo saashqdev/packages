@@ -4,13 +4,13 @@ export default [
     'exception',
     '|',
     {
-        title: '禁用测试',
+        title: 'Disable Test',
         to: '/disabled',
         disabled: true,
     },
     '|',
     {
-        title: '链接测试',
-        href: 'https://c.163yun.com/',
+        title: 'Link Test',
+        href: 'https://c.kubeworkz.io/',
     },
 ];

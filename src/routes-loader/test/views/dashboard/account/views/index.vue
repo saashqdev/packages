@@ -12,16 +12,16 @@ export default {
     data() {
         return {
             tabs: [
-                {
-                    title: '个人中心',
+            {
+                    title: 'Personal Center',
                     to: '/account/center',
                 },
                 {
-                    title: '个人设置',
+                    title: 'Personal Settings',
                     to: '/account/setting',
                 },
                 {
-                    title: '安全设置',
+                    title: 'Security Settings',
                     to: '/account/security',
                 },
             ],

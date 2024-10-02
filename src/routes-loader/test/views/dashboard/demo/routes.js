@@ -1,10 +1,10 @@
-import { LWrapper } from 'cloud-ui.kubevue';
+import { LWrapper } from 'cloud-ui.vusion';
 
 export default {
     path: 'demo',
     component: LWrapper,
     meta: {
-        crumb: 'demo',
+        crumb: 'Demo',
     },
     children: [
         {
@@ -15,8 +15,8 @@ export default {
             path: 'list',
             component: LWrapper,
             meta: {
-                title: '列表',
-                crumb: '列表',
+                title: 'List',
+                crumb: 'List',
             },
             children: [
                 { path: '', redirect: 'basic' },
@@ -25,8 +25,8 @@ export default {
                     name: 'demo.list',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/list/list.vue'),
                     meta: {
-                        title: '基础列表',
-                        crumb: '基础列表',
+                        title: 'Basic List',
+                        crumb: 'Basic List',
                     },
                 },
                 {
@@ -34,17 +34,17 @@ export default {
                     name: 'demo.localList',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/list/list.local.vue'),
                     meta: {
-                        title: '本地分页',
-                        crumb: '本地分页',
+                        title: 'Local Paging',
+                        crumb: 'Local Paging',
                     },
                 },
                 {
                     path: 'tabs',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/list/list.tabs.vue'),
                     meta: {
-                        title: 'tab 列表',
+                        title: 'Tab List',
                         crumb: {
-                            title: 'tab 列表',
+                            title: 'Tab List',
                         },
                     },
                     children: [
@@ -58,9 +58,9 @@ export default {
                             name: 'demo.tabs.list',
                             component: () => import(/* webpackChunkName: 'demo' */ './views/list/list.vue'),
                             meta: {
-                                title: '列表页',
+                                title: 'List Page',
                                 crumb: {
-                                    title: '列表页',
+                                    title: 'List Page',
                                 },
                             },
                         },
@@ -69,9 +69,9 @@ export default {
                             name: 'demo.tabs.localList',
                             component: () => import(/* webpackChunkName: 'demo' */ './views/list/list.local.vue'),
                             meta: {
-                                title: '本地分页',
+                                title: 'Local Paging',
                                 crumb: {
-                                    title: '本地分页',
+                                    title: 'Local Paging',
                                 },
                             },
                         },
@@ -80,9 +80,9 @@ export default {
                             name: 'demo.tabs.noPageList',
                             component: () => import(/* webpackChunkName: 'demo' */ './views/list/list.noPage.vue'),
                             meta: {
-                                title: '列表页(无分页)',
+                                title: 'List Page (no paging)',
                                 crumb: {
-                                    title: '列表页(无分页)',
+                                    title: 'List Page (no paging)',
                                 },
                             },
                         },
@@ -94,8 +94,8 @@ export default {
             path: 'form',
             component: LWrapper,
             meta: {
-                title: '表单',
-                crumb: '表单',
+                title: 'Form',
+                crumb: 'Form',
             },
             children: [
                 {
@@ -106,8 +106,8 @@ export default {
                     path: 'basic',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/form/basic.vue'),
                     meta: {
-                        title: '基础表单',
-                        crumb: '基础表单',
+                        title: 'Basic Form',
+                        crumb: 'Basic Fform',
                     },
                 },
                 {
@@ -115,8 +115,8 @@ export default {
                     name: 'demo.form.setting',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/form/setting.vue'),
                     meta: {
-                        title: '设置',
-                        crumb: '设置',
+                        title: 'Settings',
+                        crumb: 'Settings',
                     },
                 },
             ],
@@ -125,8 +125,8 @@ export default {
             path: 'detail',
             component: () => import(/* webpackChunkName: 'demo' */ './views/detail/index.vue'),
             meta: {
-                title: '详情',
-                crumb: '详情',
+                title: 'Details',
+                crumb: 'Details',
             },
             children: [
                 {
@@ -138,14 +138,14 @@ export default {
                     path: 'info',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/detail/info.vue'),
                     meta: {
-                        crumb: '详细信息',
+                        crumb: 'Details',
                     },
                 },
                 {
                     path: 'monitor',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/detail/monitor.vue'),
                     meta: {
-                        crumb: '监控',
+                        crumb: 'Monitoring',
                     },
                 },
             ],
@@ -154,8 +154,8 @@ export default {
             path: 'router',
             component: LWrapper,
             meta: {
-                title: '路由',
-                crumb: '路由',
+                title: 'Routing',
+                crumb: 'Routing',
                 locks: [{
                     include: [/router/],
                     params: ['search', 'demo.router.list.page'],
@@ -168,8 +168,8 @@ export default {
                     name: 'demo.router.list',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/router/list.vue'),
                     meta: {
-                        title: '列表(路由)',
-                        crumb: '列表(路由)',
+                        title: 'List (routes)',
+                        crumb: 'List (routes)',
                     },
                 },
                 {
@@ -177,16 +177,16 @@ export default {
                     name: 'demo.router.setting',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/router/setting.vue'),
                     meta: {
-                        title: '设置',
-                        crumb: '设置',
+                        title: 'Settings',
+                        crumb: 'Settings',
                     },
                 },
                 {
                     path: 'detail',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/router/detail/index.vue'),
                     meta: {
-                        title: '详情',
-                        crumb: '详情',
+                        title: 'Details',
+                        crumb: 'Details',
                     },
                     children: [
                         {
@@ -198,14 +198,14 @@ export default {
                             path: 'info',
                             component: () => import(/* webpackChunkName: 'demo' */ './views/router/detail/info.vue'),
                             meta: {
-                                crumb: '详细信息',
+                                crumb: 'Details',
                             },
                         },
                         {
                             path: 'monitor',
                             component: () => import(/* webpackChunkName: 'demo' */ './views/router/detail/monitor.vue'),
                             meta: {
-                                crumb: '监控',
+                                crumb: 'Monitoring',
                             },
                         },
                     ],
@@ -216,24 +216,24 @@ export default {
             path: 'micro',
             component: LWrapper,
             meta: {
-                title: '微前端',
-                crumb: '微前端',
+                title: 'Micro Frontend',
+                crumb: 'micro Frontend',
             },
             children: [
                 {
                     path: 'cloud-admin-1**',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/micro/cloud-admin-1.vue'),
                     meta: {
-                        title: 'cloud-admin-1',
-                        crumb: 'cloud-admin-1',
+                        title: 'Cloud-Admin-1',
+                        crumb: 'Cloud-Admin-1',
                     },
                 },
                 {
                     path: 'cloud-admin-2**',
                     component: () => import(/* webpackChunkName: 'demo' */ './views/micro/cloud-admin-2.vue'),
                     meta: {
-                        title: 'cloud-admin-2',
-                        crumb: 'cloud-admin-2',
+                        title: 'Cloud-Admin-2',
+                        crumb: 'Cloud-Admin-2',
                     },
                 },
             ],

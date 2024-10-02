@@ -8,7 +8,7 @@ export default {
         const topic = 'app:' + microApp.microName;
         subscribe(topic + ':mount', (data) => {
             if (instance) {
-                console.error('repeat trigger');
+                console.error('Repeat trigger');
                 return;
             }
             microApp.customProps = data.customProps;

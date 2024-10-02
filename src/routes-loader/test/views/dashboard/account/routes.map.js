@@ -3,25 +3,25 @@ import * as lodash from 'lodash';
 export default {
     '': {
         meta: {
-            title: '账号',
+            title: 'Account',
         },
     },
     center: {
         meta: {
-            title: '个人中心',
-            crumb: '个人中心',
+            title: 'Personal Center',
+            crumb: 'Personal Center',
         },
     },
     setting: {
         meta: {
-            title: '个人设置',
-            crumb: '个人设置',
+            title: 'Personal Settings',
+            crumb: 'Personal Settings',
         },
     },
     security: {
         meta: {
-            title: '安全设置',
-            crumb: '安全设置',
+            title: 'Security Settings',
+            crumb: 'Security Settings',
         },
     },
 };

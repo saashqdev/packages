@@ -3,7 +3,7 @@ const loaderUtils = require('loader-utils');
 const backend = require('./lib/backend');
 const _ = require('./lib/utils');
 
-// 生成routes，通过字符串拼接的形式
+// Generate routes in the form of string concatenation
 module.exports = function (content) {
     const options = Object.assign(loaderUtils.getOptions(this) || {}, loaderUtils.parseQuery(this.resourceQuery || ''));
     options.rootPath = options.rootPath || options.scopeName;
@@ -11,7 +11,7 @@ module.exports = function (content) {
 
     const resourceDir = path.dirname(this.resourcePath);
 
-    // 动态生成路由
+    // Dynamically generate routes
     const viewsPath = path.resolve(resourceDir, 'views');
     this.addContextDependency(viewsPath);
     const routesMap = backend.getRoutesMapFromDir(viewsPath, {
@@ -26,7 +26,7 @@ module.exports = function (content) {
         return route;
     });
 
-    /* 支持额外的代码，比如 imports 等 */
+    /* Support additional code, such as imports, etc. */
     return content.replace(/(export default\s+|module\.exports\s*=\s*)([\s\S]+)$/, (m, $1, $2) => {
         let customRoutesMap = {};
         try {
